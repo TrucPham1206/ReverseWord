@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  *
  * @author Truc Pham
- week3
+ week3 try to understand
  */
 public class ReverseWord {
 
