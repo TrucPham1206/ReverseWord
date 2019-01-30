@@ -7,7 +7,7 @@ package reverseword;
 import java.util.Scanner;
 /**
  *
- * @author mehta
+ * @author Truc Pham
  */
 public class ReverseWord {
 
