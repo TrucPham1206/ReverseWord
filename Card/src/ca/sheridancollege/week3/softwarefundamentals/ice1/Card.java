@@ -24,7 +24,7 @@ public class Card {
         
         for (int i=0; i<magicHand.length; i++)
         {
-            CardBase c = new CardBase();
+            CardBase c = new CardBase;
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         
