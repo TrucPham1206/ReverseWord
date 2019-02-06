@@ -17,6 +17,7 @@ public class Card {
     /**
      * @param args the command line arguments
      */
+    //insert 2 random number methods for value and suit
     public static void main(String[] args) 
     {
     
