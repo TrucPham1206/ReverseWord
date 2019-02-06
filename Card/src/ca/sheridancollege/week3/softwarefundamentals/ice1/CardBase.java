@@ -48,6 +48,6 @@ public class CardBase
         this.value = value;
     }
 
-// insert 2 random number methods for generating value and suits 
+
 
 }
