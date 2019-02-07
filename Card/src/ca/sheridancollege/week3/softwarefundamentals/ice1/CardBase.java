@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-
+import java.util.Random;
 /**
  * A class that models playing card Objects. Cards have 
  * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
@@ -47,6 +47,21 @@ public class CardBase
     public void setValue(int value) {
         this.value = value;
     }
+    public int valueRandom()
+	{
+		
+		value = (int)(Math.random()*13 +1);
+
+	    return value;
+	}
+	public int suitsRandom()
+	{
+		
+		int suit = (int)(Math.random()*3 +1);
+
+	    return suit;
+	}
+
 
 
 

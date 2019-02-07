@@ -1,42 +1,65 @@
-/*
+/* Truc Pham 991511456
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
-/****
- * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card.
- * To be used as starting code for ICE 1
- * @author Sivagami
- */
+
+import java.util.Scanner;
 public class Card {
 
-    /**
-     * @param args the command line arguments
-     */
-    //insert 2 random number methods for value and suit
-    public static void main(String[] args) 
+	public static void main(String[] args) 
     {
+        Scanner input = new Scanner (System.in);
+        boolean result = false;
     
         CardBase[] magicHand = new CardBase[7];
-        
+        CardBase c = new CardBase();
         for (int i=0; i<magicHand.length; i++)
         {
-            CardBase c = new CardBase();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        
+            c = new CardBase();
+            
+            c.setValue(c.valueRandom());
+            
+            c.setSuit(CardBase.SUITS[c.suitsRandom()]);
+            System.out.println(c.getValue() + " " + c.getSuit());
+            
         
         }
+       
+        CardBase luckyCard = new CardBase();   
+        luckyCard.setValue(12);
+        luckyCard.setSuit("heart");
+    
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+       System.out.print("Please input card number (Note: Ace=1,Jack=11, Queen=12, King=13): ");    
+        int inputValue = input.nextInt();
+        System.out.print("Please input card suit: ");    
+        String inputSuit = input.next();
+        
+       
+      
+        for(int i=0; i<magicHand.length; i++){
+            if (  inputValue == c.getValue()&& inputSuit.equals(c.getSuit())){
+               result = true;       
+            }
+            else{
+               result = false;
+            }
+            
+        }
+        
+        if (result == true){
+            System.out.println("Your Card is found");
+            
+        }
+        else{
+            System.out.println("Your Card is not found");          
+        }
     
-    
+		    
     }
-    
 }
+    
+
